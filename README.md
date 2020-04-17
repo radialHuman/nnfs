@@ -1,5 +1,5 @@
-# neural_network_from_scratch
-from sentdex's video
+# neural network from scratch
+from sentdex's video and book nnfs.io
 
 * In rust
 * .rs file numbered as per video #
