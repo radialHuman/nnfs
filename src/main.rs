@@ -2,10 +2,17 @@
 /*
 Neural network from scratch
 Instead of Python on Rust
+
+Background: Given sensor data, predict if the server will fail or not.
 */
+
 // mod one;
-mod two;
+// mod two;
+// mod three;
+mod four;
 fn main() {
     // one::one();
-    two::two();
+    // two::two();
+    // three::three();
+    four::four();
 }
