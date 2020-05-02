@@ -9,10 +9,12 @@ Background: Given sensor data, predict if the server will fail or not.
 // mod one;
 // mod two;
 // mod three;
-mod four;
+// mod four;
+mod four_oops;
 fn main() {
     // one::one();
     // two::two();
     // three::three();
-    four::four();
+    // four::four();
+    four_oops::four_oops();
 }
