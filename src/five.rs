@@ -114,6 +114,7 @@ pub fn five() {
         &generated_bias1
     );
 
+    // calulatin input*weights +bias
     let generated_output1 =
         transpose(&l1.output_of_layer(&X, &generated_weights1, &generated_bias1));
     println!(
@@ -131,7 +132,7 @@ pub fn five() {
     print_a_matrix("Input to second layer is:", &activated_output_1);
 
     // read in X
-    let X_string = read_file("./src/spiral_data_X.txt").unwrap();
+    let X_string = read_file("./src/data/spiral_data_X.txt").unwrap();
     let X_inter = &X_string
         .replace("[", "")
         .replace("]", "")
@@ -144,7 +145,7 @@ pub fn five() {
     // println!("Input is {:?}", features);
 
     // read in y
-    let y_string = read_file("./src/spiral_data_y.txt").unwrap();
+    let y_string = read_file("./src/data/spiral_data_y.txt").unwrap();
     let y_inter = &y_string.replace("[", "").replace("]", "").replace(" ", "");
     let y_vector: Vec<_> = y_inter.split(",").collect();
     // println!("Input is {:?}", X_vector);
@@ -328,7 +329,7 @@ pub fn create_data(
     (X, y)
 }
 
-pub fn element_wise_multiplication(a: &Vec<f64>, b: &Vec<f64>) -> Vec<f64> {
+pub fn element_wise_multiplication<T>(a: &Vec<T>, b: &Vec<T>) -> Vec<T> {
     a.iter().zip(b.iter()).map(|(x, y)| *x * *y).collect()
 }
 
